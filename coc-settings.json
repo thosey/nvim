@@ -1,0 +1,6 @@
+{
+        "explorer.icon.enableNerdfont": true,
+        "explorer.previewAction.onHover": false,
+        "clangd.semanticHighlighting": true,
+        "java.home": "/local/jdk1.8.0_111"
+}

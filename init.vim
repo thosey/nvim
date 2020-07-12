@@ -1,5 +1,3 @@
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
@@ -35,9 +33,11 @@ let g:floaterm_width=0.8
 let g:floaterm_height=0.8
 let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
+hi FloatermBorder guibg=orange guifg=cyan
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+
 
 " Paste in a selected region without overwriting the current buffer.
 " "_ uses the black hole register
@@ -112,8 +112,17 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nmap <Leader>c :CocCommand explorer<CR>
+nmap <Leader>c :CocCommand explorer --no-toggle<CR>
 map <Leader>q :CocSearch <C-R><C-W><cr>
+"coc explorer
+let g:coc_explorer_global_presets = {
+\   'floating': {
+\     'position': 'floating',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\ }
+" Use preset argument to open it
+nmap <leader>ef :CocCommand explorer --preset floating<CR>
 
 " FZF stuff
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
@@ -148,8 +157,8 @@ set t_vb= " Don't let the bell flash the screen
 
 syntax enable                           " Enables syntax highlighing
 set nowrap                              " Display long lines as just one line
-set ruler                                           " Show the cursor position all the time
-"set cmdheight=2                         " More space for displaying messages
+set ruler                               " Show the cursor position all the time
+"set cmdheight=2                        " More space for displaying messages
 set iskeyword+=-                        " treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below

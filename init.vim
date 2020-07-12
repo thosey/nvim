@@ -120,9 +120,7 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 " Sneak
 let g:sneak#label = 1
-
-" case insensitive sneak
-let g:sneak#use_ic_scs = 1
+let g:sneak#use_ic_scs = 1 " case insensitive sneak
 
 " immediately move to the next instance of search, if you move the cursor
 " sneak is back to default behavior
@@ -133,6 +131,7 @@ set termguicolors
 set hidden "Hide modified buffers rather than warn and close
 set number
 set relativenumber
+
 let g:gruvbox_contrast_dark = 'hard' 
 colorscheme gruvbox
 set bg=dark
@@ -157,12 +156,6 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
 set conceallevel=0                      " So that I can see `` in markdown files
-"set tabstop=2                           " Insert 2 spaces for a tab
-"set shiftwidth=2                        " Change the number of space characters inserted for indentation
-"set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-"set expandtab                           " Converts tabs to spaces
-"set smartindent                         " Makes indenting smart
-"set autoindent                          " Good auto indent
 set laststatus=0                        " Always display the status line
 set cursorline                          " Enable highlighting of the current line
 set showtabline=2                       " Always show tabs
@@ -172,4 +165,5 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+set noshowmode                          " No need to show mode when using airline
 

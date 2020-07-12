@@ -33,7 +33,6 @@ let g:floaterm_width=0.8
 let g:floaterm_height=0.8
 let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
-hi FloatermBorder guibg=orange guifg=cyan
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -175,4 +174,3 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set noshowmode                          " No need to show mode when using airline
-

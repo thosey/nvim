@@ -154,23 +154,26 @@ set cursorline " highlight current line
 set vb " Turn off the audible bell
 set t_vb= " Don't let the bell flash the screen
 
-syntax enable                           " Enables syntax highlighing
-set nowrap                              " Display long lines as just one line
-set ruler                               " Show the cursor position all the time
-"set cmdheight=2                        " More space for displaying messages
-set iskeyword+=-                        " treat dash separated words as a word text object"
-set mouse=a                             " Enable your mouse
-set splitbelow                          " Horizontal splits will automatically be below
-set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
-set conceallevel=0                      " So that I can see `` in markdown files
-set laststatus=0                        " Always display the status line
-set cursorline                          " Enable highlighting of the current line
-set showtabline=2                       " Always show tabs
-set nobackup                            " This is recommended by coc
-set nowritebackup                       " This is recommended by coc
-set updatetime=300                      " Faster completion
-set timeoutlen=500                      " By default timeoutlen is 1000 ms
-set formatoptions-=cro                  " Stop newline continution of comments
-set clipboard=unnamedplus               " Copy paste between vim and everything else
-set noshowmode                          " No need to show mode when using airline
+syntax enable         
+set nowrap             
+set ruler               
+"set cmdheight=2         
+set iskeyword+=-          
+set mouse=a                
+set splitbelow              
+set splitright               
+set conceallevel=0                      
+set laststatus=0                       
+set cursorline                        
+set showtabline=2                    
+set nobackup                        
+set nowritebackup                  
+set updatetime=300                
+set timeoutlen=500               
+set formatoptions-=cro          
+set clipboard=unnamedplus      
+set noshowmode                
+
+
+source $HOME/.config/nvim/private.vim
+

@@ -17,6 +17,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'unblevable/quick-scope'
 Plug 'voldikss/vim-floaterm'
 Plug 'justinmk/vim-sneak'
+Plug 'edkolev/tmuxline.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -36,7 +37,6 @@ let g:floaterm_autoclose=1
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-
 
 " Paste in a selected region without overwriting the current buffer.
 " "_ uses the black hole register
@@ -174,6 +174,14 @@ set formatoptions-=cro
 set clipboard=unnamedplus      
 set noshowmode                
 
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'    : '#W',
+      \'c'    : '#{pane_current_path}',
+      \'win'  : ['#I', '#{b:pane_current_path}'],
+      \'cwin' : ['#I', '#{b:pane_current_path}'],
+      \'x'    : '#(date)',
+      \'z'    : '#H'}
 
 source $HOME/.config/nvim/private.vim
 

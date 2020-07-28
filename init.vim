@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 Plug 'scrooloose/nerdtree'
+Plug 'mbbill/undotree'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf.vim', { 'do': './install --all' }
 Plug 'junegunn/fzf', { 'do': './install --all' }
@@ -68,6 +69,10 @@ map <Leader>o :NERDTreeFind<cr>
 map <Leader>f :!clang-format -sort-includes -i %<cr>
 map <Leader>i o#include ""<Esc>ci"
 map <Leader>I o#include <lt>><Esc>ci<lt>
+
+" Undo Tree
+map <Leader>u :UndotreeToggle<cr>
+let g:undotree_HighlightChangedText = 0
 
 " Rainbow parenthesis
 let g:rainbow#max_level = 16
@@ -185,3 +190,4 @@ let g:tmuxline_preset = {
 
 source $HOME/.config/nvim/private.vim
 
+hi FloatermBorder guifg=red

@@ -22,6 +22,9 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Initialize plugin system
 call plug#end()
@@ -275,3 +278,14 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
+nnoremap <leader>fo <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+nnoremap <leader>flr <cmd>lua require('telescope.builtin').lsp_references()<cr>
+nnoremap <leader>fld <cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>
+nnoremap <leader>flc <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
+

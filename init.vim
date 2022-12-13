@@ -214,14 +214,14 @@ let g:tmuxline_preset = {
 
 source $HOME/.config/nvim/private.vim
 
-hi FloatermBorder guifg=red
+hi FloatermBorder guifg=green
 
 lua << EOF
 local opts = { noremap=true, silent=true }
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '<space>E', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+vim.keymap.set('n', '<space>Q', vim.diagnostic.setloclist, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -270,7 +270,8 @@ nnoremap <leader>h <cmd>ClangdSwitchSourceHeader<cr>
 " let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
 let g:completion_matching_strategy_list = ['exact', 'substring', 'all']
 let g:completion_matching_smart_case = 1
-set completeopt=menuone,noinsert,noselect
+" set completeopt=menuone,noinsert,noselect
+set completeopt=menu,preview
 autocmd BufEnter * lua require'completion'.on_attach()
 
 lua <<EOF

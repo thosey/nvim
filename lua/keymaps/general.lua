@@ -9,3 +9,4 @@ util.map('i', "kj", "<Esc>", {})
 util.map({'n','v'}, "<leader>u", ":UndotreeToggle<cr>", { silent = true })
 util.map({'n','v'}, "<leader>n", ":NeoTreeReveal<cr>", { silent = true })
 
+util.map({'n','v'}, "<leader>s", ":w!<cr>", { silent = true })

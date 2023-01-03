@@ -49,7 +49,16 @@ use {
     }
   }
 
+use {
+  'nvim-telescope/telescope.nvim',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+
 use {'mbbill/undotree'}
 use {'mileszs/ack.vim'}
-
+use {'morhetz/gruvbox'}
+use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+})
 end)

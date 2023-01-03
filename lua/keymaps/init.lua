@@ -1,3 +1,5 @@
 require('keymaps.general')
 require('keymaps.splits')
 require('keymaps.lsp')
+require('keymaps.perforce')
+require('keymaps.telescope')

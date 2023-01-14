@@ -56,9 +56,18 @@ use {
 
 use {'mbbill/undotree'}
 use {'mileszs/ack.vim'}
+
 use {'morhetz/gruvbox'}
 use({
     'rose-pine/neovim',
     as = 'rose-pine',
 })
+use {'folke/tokyonight.nvim'}
+
+use {"ellisonleao/glow.nvim"}
+
+use {"edkolev/tmuxline.vim"}
+use {"vim-airline/vim-airline"}
+use {"vim-airline/vim-airline-themes"}
+
 end)
